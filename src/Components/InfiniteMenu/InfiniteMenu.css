@@ -1,0 +1,206 @@
+/*
+	Installed from https://reactbits.dev/default/
+*/
+
+/* Note: this CSS is only an example, you can overlay whatever you want using the activeItem logic */
+
+#infinite-grid-menu-canvas {
+  cursor: grab;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  outline: none;
+}
+
+#infinite-grid-menu-canvas:active {
+  cursor: grabbing;
+}
+
+.action-button {
+  position: absolute;
+  left: 50%;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  background: #5227ff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 5px solid #000;
+}
+
+.face-title {
+  user-select: none;
+  position: absolute;
+  font-weight: 900;
+  font-size: 4rem;
+  text-shadow: 2px 2px 8px #806c6c;
+  left: 1em;
+  top: 50%;
+  max-width: 400px;   /* Or any width you want */
+  word-wrap: break-word;
+  white-space: normal;
+
+}
+.nah{
+  visibility: hidden;
+}
+.action-button-icon {
+  user-select: none;
+  position: relative;
+  color: #fff;
+  margin: 0%;
+  padding: 0%;
+  font-size: 26px;
+}
+
+.face-title {
+  position: absolute;
+  top: 50%;
+  transform: translate(15%, 30%);
+}
+
+.face-title.active {
+  opacity: 1;
+  transform: translate(10%, -95%);
+  pointer-events: auto;
+  transition: 0.5s ease;
+}
+
+.face-title.inactive {
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.1s ease;
+}
+
+.face-description {
+  user-select: none;
+  position: absolute;
+  max-width: 10ch;
+  top: 50%;
+  font-size: 1.5rem;
+  right: 1%;
+ 
+  transform: translate(0, -50%);
+}
+
+.face-description.active {
+  opacity: 1;
+  transform: translate(-90%, -50%);
+  pointer-events: auto;
+  transition: 0.5s ease;
+}
+
+.face-description.inactive {
+  pointer-events: none;
+  transform: translate(-60%, -50%);
+  opacity: 0;
+  transition: 0.1s ease;
+}
+
+.action-button {
+  position: absolute;
+  left: 50%;
+}
+
+.action-button.active {
+  bottom: 3.8em;
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+  transition: 0.5s ease;
+}
+
+.action-button.inactive {
+  bottom: -80px;
+  transform: translateX(-50%) scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.1s ease;
+}
+
+@media (max-width: 1500px) {
+  .face-title,
+  .face-description {
+    display: none;
+  }
+}
+.face-title,
+.face-description {
+  color: white; 
+}
+.cover{
+  width: 40vw;
+  max-height: 40vh;
+   margin-left:30vw ;
+   margin-right: 30vw;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  display: block;
+  overflow: hidden;
+}
+.reciepe{
+  color: #fff;
+  position: absolute;
+  word-break:none;
+  word-wrap: break-word;
+  width: 40vw;
+  height:auto;
+  
+ max-height: 40vh;
+  padding: 1.5vw;
+  padding-top: 0.7vh;
+   overflow: hidden; /* hides both scrollbars */
+  /* or use */
+  overflow-y: auto; /* only vertical scroll when needed */
+  overflow-x: hidden; /* prevent horizontal scrollbar */
+  background-color: rgb(0,0,0,0.7);
+  border: 0.5px solid whitesmoke;
+  border-radius: 5px;
+ top:24vh;
+transition: 1s ease-in-out;
+}
+
+.reciepe:hover{
+  background-color: rgb(0,0,0,0.8);
+  transform: scale(1.01);
+
+}
+.line-one{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.2vw;
+  padding-right: 1vw;
+  font-weight: 500;
+  font-size: large;
+  font-family: sans-serif;
+}
+.close-btn{
+  background-color: transparent;
+  cursor: pointer;
+  color: red;
+  outline: none;
+  border: 0.5px solid whitesmoke;
+  border-radius: 75%;
+  padding: 0.7vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+}
+.contentss{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: cursive;
+}
+.reciepe::-webkit-scrollbar,
+.contentss::-webkit-scrollbar {
+  display: none;
+}
+
+.reciepe, .contentss {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}

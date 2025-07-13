@@ -1,0 +1,55 @@
+h1{
+    color:white;
+    z-index:99;
+    background-color: transparent;
+    position: absolute;
+    top:10vh;
+    right:10vw;
+}
+.searchable-dropdown{
+    position: absolute;
+    top:5vh;
+    left:40vw;
+}
+input[type="text"]{
+    width: 9vw;
+    height: 3vh;
+    border: none;
+    border-bottom: 1px solid white;
+    color: azure;
+    border-radius: 2px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    min-width: 20px;
+    min-height: 10px;
+    max-width: 220px;
+    background-color: transparent;
+    font-family: cursive;
+    font-weight: 350;
+    outline: none;
+    max-height: 30px;
+     transition: .5s ease-in-out;
+}
+input[type="text"]:hover{
+    width:12vw;
+    padding-left: 4vw;
+
+}
+.options-list{
+    color: antiquewhite;
+   
+    list-style: none;
+}
+.inactive{
+    visibility: hidden;
+}
+.active{
+    visibility: visible;
+}
+.options{
+     background-color: rgba(174, 81, 81, 0.5);
+    
+     border-radius: 4%;
+     display: block;
+    cursor: pointer;
+}
