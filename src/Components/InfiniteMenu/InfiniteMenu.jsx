@@ -1163,7 +1163,7 @@ const meal = r.data.meals?.[0];
         <>
         <div className="cover">
           <div  className={`reciepe ${show? "yeah" : "nah" } ${isMoving ? "nah" : null}`}>
-          <div className="line-one"><h3>Reciepe  : {activeItem.title}</h3>
+          <div className="line-one"><h3>Recipe  : {activeItem.title}</h3>
           <button onClick={()=>setShow(false)} className="close-btn">X</button></div>
           <p className="contentss">{reciepe}</p>
         
